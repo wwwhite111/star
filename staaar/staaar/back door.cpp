@@ -2,16 +2,22 @@
 
 int main()
 {
-	int a, b = 0;
+	int a = 1, b = 2;
 
-
-	for (a = 1; a <= 10; a++)
+	while (b <= 9)
 	{
-		if (a % 2 == 0) continue;
-		b += a;
-		printf("%02d까지 홀수 누적 합 : %02d\n", a, b);
+		if (b == 5)
+		{
+			b++;
+			continue;
+		}
+		while (a <= 9)
+		{
+			printf("%d * %d = = %d\n", b, a, a * b);
+			a++;
+		}
+		a = 1;
+		b++;
 	}
-	printf("1~10중 홀수의 누적 합은 : %02d\n", b);
-
 	return 0;
 }
