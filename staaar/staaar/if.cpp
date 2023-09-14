@@ -2,22 +2,33 @@
 
 int main()
 {
-	int a;
+	char season;
 
-	printf("1~99 사이의 점수 입력\n>");
-	scanf_s("%d", &a);
+	printf("봄 : a or A\n");
+	printf("여름 : s or S\n");
+	printf("가을 : d or D\n");
+	printf("겨울 : f or F\n");
+	printf("좋아하는 계절의 알파벳 입력\n>");
+	scanf_s("%c", &season, sizeof(season));
 
-	if (a > 100 || a < 0)
-		printf("입력 오류");
-	else if (a > 90)
-		printf("A");
-	else if (a > 80)
-		printf("B");
-	else if (a > 70)
-		printf("C");
-	else if (a > 60)
-		printf("D");
-	else 
-		printf("F");
-	
+	switch (season)
+	{
+	case 'A':
+	case 'a':
+		printf("봄");
+		break;
+	case 'S':
+	case 's':
+		printf("여름");
+		break;
+	case 'd':
+	case 'D':
+		printf("가을");
+		break;
+	case 'f':
+	case 'F':
+		printf("겨울");
+		break;
+	}
+	return 0;
 }
